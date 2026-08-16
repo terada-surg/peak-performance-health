@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peak Performance Health｜経営者のための分子栄養学プログラム</title>
+<meta name="description" content="健康診断は異常なし。それでも最高ではない。分子栄養学と血液データで、経営者のコンディションを設計する完全個別プログラム。監修：寺田武史医師。">
+<style>
+  :root{
+    --navy:#1C2E4A;
+    --deep:#0D1830;
+    --ink:#22324E;
+    --gold:#A98C4F;
+    --gold2:#C5A96E;
+    --gold-pale:#E6D9BC;
+    --ivory:#F5F0E5;
+    --paper:#FFFEFA;
+    --muted:#5D6678;
+    --line:#EFE9DA;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    background:var(--ivory);
+    color:var(--ink);
+    line-height:2;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:76px;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px;}
+  .en{font-family:"Didot","Bodoni 72","Baskerville",Georgia,"Times New Roman",serif;}
+  .sans{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;}
+
+  /* ===== 日本語の改行制御 ===== */
+  /* 対応ブラウザでは文節（意味のまとまり）単位で自動改行する */
+  h1,h2,h3,h4,p,li,.txt,.stage-jp,.stage-for,.val,.check-msg{
+    line-break:strict;
+    word-break:auto-phrase;
+  }
+  /* 文節を途中で割らせない単位。中で改行させたくない語句を包む */
+  .np{display:inline-block;}
+
+  /* ===== shared parts ===== */
+  .hairline{
+    display:flex;align-items:center;gap:clamp(10px,3vw,18px);justify-content:center;
+    color:var(--gold);font-size:clamp(10px,2.6vw,12px);
+    letter-spacing:clamp(.16em,.85vw,.42em);text-transform:uppercase;
+  }
+  .hairline::before,.hairline::after{content:"";height:1px;flex:1 1 16px;max-width:56px;background:var(--gold-pale);}
+  section{padding:78px 0 0;}
+  .sec-label{margin-bottom:16px;}
+  .sec-title{
+    text-align:center;font-size:clamp(21px,5vw,28px);color:var(--navy);
+    letter-spacing:.09em;font-weight:600;line-height:1.85;margin-bottom:32px;
+  }
+  .sec-title .g{color:var(--gold);}
+  .lead{
+    font-size:15px;color:var(--ink);letter-spacing:.04em;
+    text-align:center;margin-bottom:38px;line-height:2.2;
+  }
+  .lead em{font-style:normal;color:var(--navy);border-bottom:1px solid var(--gold2);padding-bottom:2px;}
+  .card{
+    background:var(--paper);border:1px solid var(--gold-pale);
+    box-shadow:0 10px 40px rgba(28,46,74,.06);
+  }
+  .band{
+    background:var(--navy);color:#F4EFE3;text-align:center;
+    padding:26px 24px;font-size:clamp(15px,3.8vw,17.5px);line-height:2;letter-spacing:.05em;
+    border:1px solid rgba(197,169,110,.55);
+  }
+  .band .g{color:var(--gold2);}
+
+  /* ===== HEADER ===== */
+  .topbar{
+    background:var(--deep);padding:14px 10px;text-align:center;
+    color:var(--gold-pale);font-size:clamp(8.5px,2.3vw,10.5px);
+    letter-spacing:clamp(.16em,.85vw,.46em);text-transform:uppercase;text-indent:.16em;
+  }
+  .hero{
+    background:
+      radial-gradient(ellipse 110% 55% at 50% 4%, rgba(197,169,110,.09) 0%, rgba(197,169,110,0) 58%),
+      linear-gradient(180deg,#26395C 0%,#1A2942 60%,#0D1830 100%);
+    padding:62px 0 74px;border-bottom:2px solid var(--gold);text-align:center;
+  }
+  .logo{margin:0 auto 26px;width:104px;height:auto;display:block;color:var(--gold2);}
+  .logotype{font-size:clamp(11.5px,3.2vw,14px);letter-spacing:clamp(.2em,.95vw,.42em);color:#F2ECDB;text-transform:uppercase;margin-bottom:7px;text-indent:.2em;}
+  .logosub{font-size:clamp(8.5px,2.3vw,10px);letter-spacing:clamp(.15em,.7vw,.3em);color:var(--gold2);text-transform:uppercase;margin-bottom:48px;text-indent:.15em;}
+  h1{font-size:clamp(23px,6.2vw,42px);font-weight:600;color:#F7F2E4;line-height:1.7;letter-spacing:.05em;margin-bottom:28px;}
+  h1 .g{color:var(--gold2);}
+  .hero-sub{font-size:clamp(14px,3.4vw,16px);color:#BFBAAA;letter-spacing:.05em;line-height:2.2;}
+  .hero-sub strong{color:#EFE9DA;font-weight:600;}
+  .hero-chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:30px;}
+  .chip{
+    border:1px solid rgba(197,169,110,.6);border-radius:999px;
+    padding:6px 15px;font-size:11.5px;letter-spacing:.1em;color:var(--gold2);
+  }
+
+  /* ===== SELF CHECK ===== */
+  .check-card{padding:38px 26px 32px;border-top:3px solid var(--gold);}
+  .check-item{
+    display:flex;align-items:flex-start;gap:15px;
+    padding:14px 3px;border-bottom:1px solid var(--line);
+    cursor:pointer;user-select:none;
+  }
+  .check-item:last-of-type{border-bottom:none;}
+  .check-item input{display:none;}
+  .box{
+    flex:0 0 23px;height:23px;margin-top:7px;
+    border:1px solid var(--gold2);background:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;color:transparent;transition:all .18s;
+  }
+  .check-item input:checked + .box{background:var(--navy);border-color:var(--navy);color:var(--gold2);}
+  .check-item .txt{font-size:14.5px;letter-spacing:.03em;line-height:1.9;}
+  .check-item input:checked ~ .txt{color:var(--navy);font-weight:600;}
+  .check-result{margin-top:28px;background:var(--ivory);border:1px solid var(--gold-pale);padding:24px 22px;text-align:center;}
+  .check-count{font-size:12.5px;letter-spacing:.24em;color:var(--gold);margin-bottom:8px;text-transform:uppercase;}
+  .check-count b{font-size:30px;color:var(--navy);letter-spacing:.05em;vertical-align:-3px;padding:0 4px;}
+  .check-msg{font-size:14px;color:var(--ink);line-height:2.1;letter-spacing:.03em;}
+  .check-msg strong{color:var(--navy);}
+
+  /* ===== dark blocks ===== */
+  .dark{background:var(--navy);color:#EFE9DA;margin-top:78px;padding:68px 0 72px;text-align:center;}
+  .dark .hairline{color:var(--gold2);}
+  .dark .hairline::before,.dark .hairline::after{background:rgba(197,169,110,.42);}
+  .dark h2{font-size:clamp(20px,4.8vw,27px);color:#F7F2E4;letter-spacing:.09em;font-weight:600;line-height:2;margin:22px 0 24px;}
+  .dark h2 .g{color:var(--gold2);}
+  .dark p{font-size:14.5px;color:#C9C4B4;line-height:2.3;letter-spacing:.04em;}
+  .dark p strong{color:#EFE9DA;font-weight:600;}
+
+  /* ===== METHOD (3 pillars) ===== */
+  .pillar{display:flex;gap:20px;align-items:flex-start;padding:26px 26px;border-bottom:1px solid var(--line);}
+  .pillar:last-of-type{border-bottom:none;}
+  .pillar .ic{flex:0 0 58px;height:58px;border:1px solid var(--gold-pale);border-radius:50%;background:#F8F1E2;display:flex;align-items:center;justify-content:center;}
+  .pillar .ic svg{width:30px;height:30px;stroke:#33476C;fill:none;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;}
+  .pillar .ic svg .ac{stroke:var(--gold);}
+  .pillar .no{font-size:11px;letter-spacing:.3em;color:var(--gold);margin-bottom:3px;}
+  .pillar h3{font-size:17px;color:var(--navy);letter-spacing:.06em;margin-bottom:5px;font-weight:600;}
+  .pillar p{font-size:13.5px;color:var(--muted);line-height:2;}
+
+  /* ===== 2F+3C ===== */
+  .fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .fc{padding:26px 20px;text-align:center;}
+  .fc .big{font-size:40px;color:var(--gold);line-height:1;margin-bottom:8px;}
+  .fc .cap{font-size:10.5px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}
+  .fc h4{font-size:16px;color:var(--navy);font-weight:600;margin-bottom:12px;letter-spacing:.06em;}
+  .fc ul{list-style:none;font-size:13px;color:var(--muted);line-height:2.1;}
+  .fc li::before{content:"—　";color:var(--gold2);}
+  @media(max-width:520px){.fc-grid{grid-template-columns:1fr;}}
+
+  /* ===== DATA STOCK ===== */
+  .bars{display:flex;align-items:flex-end;justify-content:center;gap:16px;height:120px;margin:6px 0 22px;}
+  .bar{width:44px;background:linear-gradient(180deg,var(--gold2),var(--gold));position:relative;}
+  .bar span{position:absolute;bottom:-24px;left:0;right:0;text-align:center;font-size:10.5px;color:var(--muted);letter-spacing:.06em;}
+
+  /* ===== STAGES ===== */
+  .stage{margin-bottom:20px;position:relative;}
+  .stage-head{padding:26px 26px 20px;border-bottom:1px solid var(--line);}
+  .stage-tag{font-size:10.5px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:8px;}
+  .stage-name{font-size:26px;letter-spacing:.16em;color:var(--navy);line-height:1.3;}
+  .stage-jp{font-size:14px;color:var(--navy);font-weight:600;margin-top:4px;letter-spacing:.06em;}
+  .stage-for{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.9;}
+  .stage-body{padding:22px 26px 24px;}
+  .stage-body ul{list-style:none;}
+  .stage-body li{font-size:13.5px;line-height:1.8;padding:7px 0 7px 26px;position:relative;letter-spacing:.02em;}
+  .stage-body li::before{
+    content:"";position:absolute;left:2px;top:14px;width:11px;height:6px;
+    border-left:1.8px solid var(--gold);border-bottom:1.8px solid var(--gold);transform:rotate(-45deg);
+  }
+  .stage-price{
+    border-top:1px dashed var(--gold-pale);margin-top:6px;padding-top:20px;text-align:center;
+  }
+  .stage-price .amt{font-size:36px;color:var(--navy);letter-spacing:.02em;}
+  .stage-price .amt .pre{font-size:15px;color:var(--muted);}
+  .stage-price .free{font-size:34px;color:var(--navy);letter-spacing:.2em;font-weight:600;text-indent:.2em;}
+  .stage-price .sub{font-size:11.5px;color:var(--muted);letter-spacing:.06em;margin-top:6px;line-height:1.8;}
+  /* highlighted navy stage */
+  .stage.hl{background:var(--navy);border-color:rgba(197,169,110,.6);}
+  .stage.hl .stage-head{border-bottom-color:rgba(197,169,110,.28);}
+  .stage.hl .stage-tag{color:var(--gold2);}
+  .stage.hl .stage-name{color:var(--gold2);font-size:21px;letter-spacing:.13em;}
+  .stage.hl .stage-jp{color:#F4EFE3;}
+  .stage.hl .stage-for{color:#C9D2E0;}
+  .stage.hl .stage-body li{color:#E9E2D2;}
+  .stage.hl .stage-body li::before{border-color:var(--gold2);}
+  .stage.hl .stage-price{border-top-color:rgba(197,169,110,.35);}
+  .stage.hl .stage-price .amt{color:#F4EFE3;}
+  .stage.hl .stage-price .amt .pre{color:#C9D2E0;}
+  .stage.hl .stage-price .sub{color:#AFB9C9;}
+  .arrow-down{text-align:center;color:var(--gold);font-size:15px;letter-spacing:.2em;margin:0 0 18px;}
+  .arrow-down small{display:block;font-size:11px;color:var(--muted);letter-spacing:.1em;margin-top:-4px;}
+  .ribbon{
+    position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;
+    font-size:10.5px;letter-spacing:.16em;padding:5px 13px;
+  }
+
+  /* ===== OPTIONS ===== */
+  .opt{display:flex;gap:16px;align-items:center;padding:18px 24px;border-bottom:1px solid var(--line);}
+  .opt:last-of-type{border-bottom:none;}
+  .opt .ic{flex:0 0 46px;height:46px;border:1px solid var(--gold-pale);border-radius:50%;background:#F8F1E2;display:flex;align-items:center;justify-content:center;}
+  .opt .ic svg{width:24px;height:24px;stroke:#33476C;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .opt .ic svg .ac{stroke:var(--gold);}
+  .opt h4{font-size:15px;color:var(--navy);font-weight:600;letter-spacing:.04em;}
+  .opt p{font-size:12.5px;color:var(--muted);line-height:1.7;margin-top:2px;}
+
+  /* ===== TRACK RECORD ===== */
+  .rec{display:flex;gap:16px;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line);}
+  .rec:last-of-type{border-bottom:none;}
+  .rec .cat{flex:0 0 104px;font-size:11px;letter-spacing:.04em;color:var(--gold);line-height:1.7;}
+  .rec .val{font-size:15px;color:var(--navy);font-weight:600;line-height:1.7;letter-spacing:.03em;}
+  .rec .val small{display:block;font-size:12.5px;color:var(--muted);font-weight:400;margin-top:2px;}
+
+  /* ===== DOCTOR ===== */
+  .doc{padding:34px 26px;text-align:center;}
+  .doc .role{font-size:10.5px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;}
+  .doc .name{font-size:26px;color:var(--navy);letter-spacing:.24em;font-weight:600;text-indent:.24em;}
+  .doc .name-en{font-size:11px;letter-spacing:.34em;color:var(--gold);margin-top:8px;text-indent:.34em;}
+  .doc .aff{font-size:12.5px;color:var(--muted);line-height:2;margin-top:14px;}
+  .doc .bio{font-size:13.5px;color:var(--ink);line-height:2.15;margin-top:18px;padding-top:18px;border-top:1px solid var(--line);text-align:left;letter-spacing:.02em;}
+
+  /* ===== APPLY ===== */
+  .apply{padding-bottom:80px;}
+  .apply-card{padding:44px 26px 40px;text-align:center;border:1px solid var(--gold);}
+  .apply-card h2{font-size:clamp(20px,5vw,26px);color:var(--navy);letter-spacing:.08em;font-weight:600;line-height:1.9;margin:18px 0 20px;}
+  .apply-card .terms{font-size:13.5px;color:var(--muted);line-height:2.2;letter-spacing:.03em;}
+  .apply-card .terms strong{color:var(--navy);}
+  .apply-card hr{border:none;border-top:1px solid var(--line);margin:20px auto;width:72%;}
+  .cta{
+    display:block;width:100%;max-width:400px;margin:26px auto 0;
+    background:var(--navy);color:#F2ECDB;text-decoration:none;
+    padding:20px 18px;font-size:16px;letter-spacing:.16em;font-weight:600;
+    border:1px solid var(--navy);box-shadow:0 12px 30px rgba(13,24,48,.24);transition:all .2s;
+  }
+  .cta:hover{background:var(--deep);transform:translateY(-1px);}
+  .cta small{display:block;font-size:11px;letter-spacing:.24em;color:var(--gold2);margin-top:6px;font-weight:400;}
+  .apply-note{font-size:12px;color:#9A9587;margin-top:18px;letter-spacing:.05em;line-height:2;}
+
+  /* ===== STICKY CTA ===== */
+  .sticky{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:rgba(13,24,48,.96);border-top:1px solid rgba(197,169,110,.5);
+    padding:11px 16px;display:flex;align-items:center;gap:14px;justify-content:center;
+  }
+  .sticky .t{font-size:12px;color:var(--gold2);letter-spacing:.08em;line-height:1.6;}
+  .sticky .t b{display:block;color:#F4EFE3;font-size:13.5px;font-weight:600;}
+  .sticky a{
+    background:var(--gold);color:#fff;text-decoration:none;padding:12px 20px;
+    font-size:13.5px;letter-spacing:.1em;font-weight:600;white-space:nowrap;
+  }
+  @media(max-width:400px){.sticky .t{font-size:11px;} .sticky a{padding:11px 15px;font-size:12.5px;}}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--deep);color:#B3AE9E;text-align:center;padding:42px 24px;font-size:12px;letter-spacing:.1em;line-height:2.2;}
+  footer .flogo{width:58px;margin:0 auto 14px;display:block;color:var(--gold2);}
+  footer .fbrand{color:var(--gold2);font-size:clamp(10.5px,2.9vw,12.5px);letter-spacing:clamp(.18em,.9vw,.38em);margin-bottom:10px;text-transform:uppercase;text-indent:.18em;}
+</style>
+</head>
+<body>
+
+<!-- ===== SVG DEFS ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <g id="logo-mark" fill="none">
+    <circle cx="60" cy="60" r="52" stroke="currentColor" stroke-width="1.7"/>
+    <circle cx="60" cy="60" r="44" stroke="currentColor" stroke-width=".9" stroke-dasharray="1.6 4" opacity=".7"/>
+    <path d="M25 78 L45 57 L57 66 L76 41 L88 79" stroke="currentColor" stroke-width="3.4" stroke-linejoin="miter" stroke-linecap="butt"/>
+    <path d="M76 41 L76 36" stroke="currentColor" stroke-width="2.2"/>
+    <circle cx="76" cy="32.6" r="3.1" fill="currentColor"/>
+    <path d="M36 86 L86 86" stroke="currentColor" stroke-width="1.2" opacity=".8"/>
+  </g>
+  <g id="i-flame"><path d="M12 2.8c.8 3.4 5.5 5.6 5.5 9.7a5.5 5.5 0 0 1-11 0c0-2 .9-3.3 2-5.2 1 1.8 2.6 2.1 3.5-4.5z"/><path class="ac" d="M12 13.2c.6 1.3 2.2 2.1 2.2 3.6a2.2 2.2 0 0 1-4.4 0c0-1.5 1.6-2.3 2.2-3.6z"/></g>
+  <g id="i-gut"><path d="M4.5 7c0-1.9 1.8-2.8 3.7-2.8h7.6c2 0 3.7 1 3.7 2.9s-1.7 2.9-3.7 2.9H8.2c-2 0-3.7 1-3.7 2.9s1.7 2.9 3.7 2.9h7.6c2 0 3.7 1 3.7 2.9s-1.8 2.8-3.7 2.8"/></g>
+  <g id="i-drop"><path d="M12 2.8c3.2 4.2 6.2 7.3 6.2 11a6.2 6.2 0 0 1-12.4 0c0-3.7 3-6.8 6.2-11z"/><path class="ac" d="M9.5 14.5a3 3 0 0 0 2.5 3"/></g>
+  <g id="i-dna"><path d="M8 3c0 4 8 5 8 9s-8 5-8 9"/><path class="ac" d="M16 3c0 4-8 5-8 9s8 5 8 9"/><path d="M9.2 7h5.6M9.2 17h5.6"/></g>
+  <g id="i-shield"><path d="M12 2.6l7.5 3v6.1c0 4.3-3.1 8.3-7.5 9.7-4.4-1.4-7.5-5.4-7.5-9.7V5.6z"/><path class="ac" d="M8.6 12l2.4 2.4 4.4-4.6"/></g>
+  <g id="i-brain"><path d="M9.4 3.6A3.2 3.2 0 0 0 6.2 7a2.9 2.9 0 0 0-2 4.6A3 3 0 0 0 6 16.4a3.1 3.1 0 0 0 3.4 3.9V3.6z"/><path class="ac" d="M14.6 3.6A3.2 3.2 0 0 1 17.8 7a2.9 2.9 0 0 1 2 4.6A3 3 0 0 1 18 16.4a3.1 3.1 0 0 1-3.4 3.9V3.6z"/></g>
+  <g id="i-pill"><rect x="2.6" y="8.4" width="18.8" height="7.2" rx="3.6" transform="rotate(-40 12 12)"/><path class="ac" d="M9.1 8.2l5.8 5.8"/></g>
+</defs>
+</svg>
+
+<div class="topbar en">Molecular Nutrition for Executives</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 120 120" aria-label="Peak Performance Health"><use href="#logo-mark"/></svg>
+    <div class="logotype en">Peak Performance Health</div>
+    <div class="logosub en">Executive Nutrition Program</div>
+
+    <h1><span class="np">不調は、ない。</span><br><span class="np">だが、<span class="g">最高</span>でもない。</span></h1>
+    <p class="hero-sub"><span class="np">健康診断は異常なし。</span><span class="np">自分でも、</span><span class="np">調子が悪いとは思っていない。</span><br><span class="np">それでも──経営者の身体には、</span><span class="np"><strong>本人も気づいていない「伸びしろ」</strong>が</span><span class="np">眠っています。</span></p>
+
+    <div class="hero-chips">
+      <span class="chip">初回トライアルは無料</span>
+      <span class="chip">分子栄養学 × 血液データ</span>
+      <span class="chip">医師が直接伴走</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= SELF CHECK ================= -->
+<section>
+  <div class="wrap">
+    <div class="hairline en sec-label">Self Check</div>
+    <h2 class="sec-title">言われてみれば、<br>思い当たりませんか。</h2>
+    <p class="lead"><span class="np">「不調」と呼ぶほどではない。</span><span class="np">けれど、<em>最高の状態か</em>と</span><span class="np">問われると──。</span><br><span class="np">当てはまるものに、</span><span class="np">印をつけてみてください。</span></p>
+
+    <div class="card check-card">
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">会食の翌日は、立ち上がりがいつもより鈍い</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">午前中、エンジンがかかるまでに時間がかかる</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">午後、集中力が切れる時間帯が決まってある</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">昼食後、強い眠気に襲われる日がある</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">眠っているのに、翌朝「回復した」という感覚が薄い</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">疲労が、以前より翌日に残るようになった</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">判断の切れ味が、鈍った気がする瞬間がある</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">出張翌日の回復が、遅くなってきた</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">頭に薄い霧がかかったように、クリアさに欠ける日がある</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">便通・胃腸の調子が、安定しない日がある</span></label>
+
+      <div class="check-result">
+        <div class="check-count en">Check <b id="cnt">0</b>/ 10</div>
+        <p class="check-msg" id="msg">印をつけると、ここに読み解きが表示されます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PHILOSOPHY ================= -->
+<div class="dark">
+  <div class="wrap">
+    <div class="hairline en">Philosophy</div>
+    <h2>健康診断が見ているのは、<br>「病気かどうか」だけ。<br><span class="g">最高かどうか</span>は、誰も見ていない。</h2>
+    <p><span class="np">立ち上がりの速さ、</span><span class="np">判断の切れ味、</span><span class="np">回復力。</span><br><span class="np">これらは病気の領域ではなく、</span><span class="np"><strong>栄養と代謝の領域</strong>の話です。</span><br><span class="np">「異常ではない。</span><span class="np">でも、年々悪くなっている」──</span><br><span class="np">その差分は、</span><span class="np"><strong>血液データ</strong>でしか</span><span class="np">捉えられません。</span></p>
+  </div>
+</div>
+
+<!-- ================= RISK ================= -->
+<section>
+  <div class="wrap">
+    <div class="hairline en sec-label">Why Now</div>
+    <h2 class="sec-title">事業が伸びるほど、<br>最大のリスクは<span class="g">経営者の健康</span>になる。</h2>
+    <p class="lead"><span class="np">トップアスリートは、</span><span class="np">体を戦略にしています。</span><br><span class="np">大谷翔平は睡眠までを武器にし、</span><span class="np">L・ジェームスは</span><span class="np">年間2.5億円を身体に投じる。</span><br><span class="np">──<em>経営者だけが、</em></span><span class="np"><em>感覚のままでいいのか。</em></span></p>
+    <div class="band">体調が悪くなってから医者、という発想では<span class="g">もう勝てない</span>。</div>
+  </div>
+</section>
+
+<!-- ================= METHOD ================= -->
+<section>
+  <div class="wrap">
+    <div class="hairline en sec-label">Zone Medical Method</div>
+    <h2 class="sec-title">整える順番は、<br><span class="g">決まっている</span>。</h2>
+    <p class="lead"><span class="np">私たちが体系化した</span><span class="np">「ゾーンメディカルメソッド」は、</span><br><span class="np">次の3つの柱で</span><span class="np">身体を立て直します。</span></p>
+
+    <div class="card">
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24"><use href="#i-flame"/></svg></div>
+        <div>
+          <div class="no en">01</div>
+          <h3>慢性炎症を鎮める</h3>
+          <p>血糖の乱高下、内臓脂肪、睡眠不足が生む「見えない火事」。集中力と判断の切れを、静かに削ります。</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24"><use href="#i-gut"/></svg></div>
+        <div>
+          <div class="no en">02</div>
+          <h3>腸内環境を整える</h3>
+          <p>「第二の脳」である腸が乱れると、栄養は吸収されず炎症が続く。メンタルと直感の土台でもあります。</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24"><use href="#i-drop"/></svg></div>
+        <div>
+          <div class="no en">03</div>
+          <h3>毒素を排出する（デトックス）</h3>
+          <p>重金属・カビ毒・化学物質。溜まった毒素は代謝を止め、脳の働きそのものを鈍らせます。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="band" style="margin-top:24px;"><span class="np">この3つが整って初めて、</span><span class="np">ホルモン・ミトコンドリア・</span><span class="np">神経伝達物質が動き出す。</span><br><span class="np">だからPPHは、</span><span class="np"><span class="g">土台から順に</span>整えます。</span></div>
+  </div>
+</section>
+
+<!-- ================= 2F+3C ================= -->
+<section>
+  <div class="wrap">
+    <div class="hairline en sec-label">Diet Method</div>
+    <h2 class="sec-title">禁止ではなく、<br><span class="g">「選び方」</span>を変える。</h2>
+    <p class="lead"><span class="np">食事設計「2F+3C」は、</span><span class="np"><em>2つを外し、3つを選び直す</em>だけ。</span><br><span class="np">会食も出張も</span><span class="np">続けられる設計です。</span></p>
+
+    <div class="fc-grid">
+      <div class="card fc">
+        <div class="big en">2F</div>
+        <div class="cap en">Two Free</div>
+        <h4>2つを、外す</h4>
+        <ul>
+          <li>グルテンフリー（小麦）</li>
+          <li>カゼインフリー（乳製品）</li>
+        </ul>
+      </div>
+      <div class="card fc">
+        <div class="big en">3C</div>
+        <div class="cap en">Three Choice</div>
+        <h4>3つを、選ぶ</h4>
+        <ul>
+          <li>シュガー（量とタイミング）</li>
+          <li>ファット（質）</li>
+          <li>カフェイン（量と時間帯）</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="band" style="margin-top:20px;">我慢を続けるのではなく、<span class="g">判断基準</span>を持つ。<br>だから、会食の席でも迷わない。</div>
+  </div>
+</section>
+
+<!-- ================= DATA STOCK ================= -->
+<section>
+  <div class="wrap">
+    <div class="hairline en sec-label">Data Stock</div>
+    <h2 class="sec-title">測って終わりに、<br><span class="g">しない</span>。</h2>
+    <p class="lead"><span class="np">健康診断は、</span><span class="np">その瞬間の異常しか見ていません。</span><br><span class="np">PPHは検査のたびに</span><span class="np">データを蓄積し、</span><span class="np"><em>前回との差分</em>から</span><span class="np">変化の兆しを読みます。</span></p>
+
+    <div class="card" style="padding:34px 26px 44px;">
+      <div class="bars">
+        <div class="bar" style="height:34%"><span>初回</span></div>
+        <div class="bar" style="height:56%"><span>3ヶ月</span></div>
+        <div class="bar" style="height:78%"><span>6ヶ月</span></div>
+        <div class="bar" style="height:100%"><span>1年</span></div>
+      </div>
+      <p style="text-align:center;font-size:14px;color:var(--muted);line-height:2.1;margin-top:14px;">
+        <span class="np">自分のデータを持っていることが、</span><span class="np"><strong style="color:var(--navy);">資産</strong>になる。</span><br>
+        <span class="np">点ではなく、</span><span class="np"><strong style="color:var(--navy);">線</strong>で身体を見続けます。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STAGES ================= -->
+<section id="plans">
+  <div class="wrap">
+    <div class="hairline en sec-label">Roadmap</div>
+    <h2 class="sec-title">入口は、<span class="g">無料</span>。<br>段階的に、深く。</h2>
+    <p class="lead"><span class="np">まずはトライアルで体感。</span><br><span class="np">数値とあなたの目標に合わせて、</span><span class="np">次のステージへ</span><span class="np">進むかを選べます。</span></p>
+
+    <!-- TRIAL -->
+    <div class="card stage">
+      <div class="ribbon en">FREE</div>
+      <div class="stage-head">
+        <div class="stage-tag en">Free Trial</div>
+        <div class="stage-name en">TRIAL</div>
+        <div class="stage-jp">トライアル｜1ヶ月</div>
+        <div class="stage-for">まずは、リスクなく体感してみたい方に</div>
+      </div>
+      <div class="stage-body">
+        <ul>
+          <li><span class="np">CGM（Dexcom）</span><span class="np">24時間血糖測定（10日間）</span></li>
+          <li>2F+3C 食事指導</li>
+          <li>1ヶ月伴走（無制限LINE栄養相談）</li>
+          <li><span class="np"><strong>紹介特典</strong>：経験者のご紹介で、</span><span class="np">栄養解析検査（初回）無料</span></li>
+        </ul>
+        <div class="stage-price">
+          <div class="free">無料</div>
+          <div class="sub">体験期間 1ヶ月</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrow-down">▼<small>体験して判断</small></div>
+
+    <!-- FIRST WIN -->
+    <div class="card stage">
+      <div class="stage-head">
+        <div class="stage-tag en">Stage 1</div>
+        <div class="stage-name en">FIRST WIN</div>
+        <div class="stage-jp">ファーストウィン｜3ヶ月</div>
+        <div class="stage-for"><span class="np">まず、現在地を数値で知り、</span><span class="np">最初の改善を得たい方に</span></div>
+      </div>
+      <div class="stage-body">
+        <ul>
+          <li><span class="np">CGM（Dexcom）</span><span class="np">24時間血糖測定（10日間）</span></li>
+          <li>血液栄養解析（70項目）</li>
+          <li>2F+3C 食事指導・3ヶ月伴走</li>
+          <li>無制限LINE相談</li>
+          <li>3ヶ月後 再栄養解析</li>
+        </ul>
+        <div class="stage-price">
+          <div class="amt en">&yen;88,000</div>
+          <div class="sub">税込・3ヶ月｜血液栄養解析2回込み<br>サプリメント別途</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrow-down">▼<small>再解析で判断</small></div>
+
+    <!-- PEAK PERFORMANCE -->
+    <div class="card stage hl">
+      <div class="stage-head">
+        <div class="stage-tag en">Stage 2</div>
+        <div class="stage-name en">PEAK PERFORMANCE</div>
+        <div class="stage-jp">ピークパフォーマンス｜12ヶ月</div>
+        <div class="stage-for">最高を、再現できる身体にしたい方に</div>
+      </div>
+      <div class="stage-body">
+        <ul>
+          <li><span class="np"><strong>ファーストウィンの全内容</strong>＋</span><span class="np">1年間の医療伴走</span></li>
+          <li><span class="np">尿有機酸検査</span><span class="np">（ミトコンドリア・代謝）</span></li>
+          <li><span class="np">GI-MAP（腸内環境）／</span><span class="np">尿有害重金属検査</span></li>
+          <li><span class="np">唾液コルチゾール検査</span><span class="np">（副腎・ストレス）</span></li>
+          <li><span class="np">カンジダ除菌（2ヶ月）・</span><span class="np">体内デトックス（3ヶ月）</span></li>
+          <li>思考の癖のコンディション把握</li>
+        </ul>
+        <div class="stage-price">
+          <div class="amt en"><span class="pre">月額</span>&yen;77,000</div>
+          <div class="sub">税込・12ヶ月｜各種検査費用込み<br>サプリメント別途</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center;font-size:14.5px;color:var(--navy);line-height:2.1;margin-top:26px;letter-spacing:.03em;">
+      <span class="np">分子栄養学に精通した<strong>医師</strong>が、</span><br><span class="np">検査から実装まで</span><span class="np">直接伴走します。</span>
+    </p>
+    <p style="text-align:center;font-size:12px;color:var(--muted);line-height:1.9;margin-top:12px;">
+      <span class="np">※自由診療（保険適用外）です。</span><br><span class="np">※サプリメント</span><span class="np">（カンジダ除菌・デトックス用を含む）は</span><span class="np">検査結果に応じて別途。</span>
+    </p>
+  </div>
+</section>
+
+<!-- ================= OPTIONS ================= -->
+<section>
+  <div class="wrap">
+    <div class="hairline en sec-label">Option</div>
+    <h2 class="sec-title">ステージとともに、<br><span class="g">拓ける選択肢</span>。</h2>
+    <p class="lead"><span class="np">経営者の関心が高い</span><span class="np">検査・サポートを、</span><br><span class="np">目的に応じて</span><span class="np">個別にご提案します。</span></p>
+
+    <div class="card">
+      <div class="opt">
+        <div class="ic"><svg viewBox="0 0 24 24"><use href="#i-dna"/></svg></div>
+        <div><h4>遺伝子検査</h4><p>メチレーション ほか</p></div>
+      </div>
+      <div class="opt">
+        <div class="ic"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></div>
+        <div><h4>感染症の検査</h4><p>ピロリ菌・プライベートチェック ほか</p></div>
+      </div>
+      <div class="opt">
+        <div class="ic"><svg viewBox="0 0 24 24"><use href="#i-brain"/></svg></div>
+        <div><h4>認知症リスク評価</h4><p>早期認知症診断・遺伝子リスク検査</p></div>
+      </div>
+      <div class="opt">
+        <div class="ic"><svg viewBox="0 0 24 24"><use href="#i-pill"/></svg></div>
+        <div><h4>エグゼクティブ・サプリセット</h4><p>検査結果に基づく個別設計</p></div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:14px;">※内容・費用は個別にご案内します</p>
+  </div>
+</section>
+
+<!-- ================= TRACK RECORD ================= -->
+<section>
+  <div class="wrap">
+    <div class="hairline en sec-label">Track Record</div>
+    <h2 class="sec-title">トップアスリートが、<br><span class="g">結果</span>で証明してきた。</h2>
+    <p class="lead"><span class="np">分子栄養学 × 血液データの</span><span class="np">個別最適化は、</span><br><span class="np">勝負の世界で</span><span class="np">磨かれてきました。</span></p>
+
+    <div class="card">
+      <div class="rec">
+        <div class="cat">女子<br>バスケットボール</div>
+        <div class="val">オリンピック銀メダリストを支援</div>
+      </div>
+      <div class="rec">
+        <div class="cat">プロ野球</div>
+        <div class="val">年俸 3,500万 → 6,800万<small>オールスター選出</small></div>
+      </div>
+      <div class="rec">
+        <div class="cat">オートレース</div>
+        <div class="val">SG 0勝 → 2勝<small>賞金ランキング4位へ</small></div>
+      </div>
+      <div class="rec">
+        <div class="cat">ほか多数</div>
+        <div class="val">幕内力士・Jリーガーなど<small>トップ選手のコンディションを支援</small></div>
+      </div>
+    </div>
+
+    <div class="band" style="margin-top:22px;">この方法論を、経営者のために設計し直したのが<br><span class="g">Peak Performance Health</span> です。</div>
+  </div>
+</section>
+
+<!-- ================= DOCTOR ================= -->
+<section>
+  <div class="wrap">
+    <div class="hairline en sec-label">Doctor</div>
+    <h2 class="sec-title">担当は、すべて<br><span class="g">医師本人</span>です。</h2>
+
+    <div class="card doc">
+      <div class="role en">Founder &amp; Medical Director</div>
+      <div class="name">寺田 武史</div>
+      <div class="name-en en">TAKESHI TERADA, M.D.</div>
+      <div class="aff">アクアメディカルクリニック院長<br>株式会社ATIPIX 代表取締役</div>
+      <p class="bio">消化器外科医として臨床に立ち続けたのち、分子栄養学へ。著書<span class="np">『なぜ、人は病気になるのか？』</span><span class="np">『元気なカラダを手に入れる3つのミト育』</span>はいずれもAmazonランキング1位。自身も<span class="np">IRONMANを完走する</span><span class="np">トライアスリート</span>として、分子栄養学的アプローチを体現しています。検査の解析から日々の伴走まで、<span class="np">担当はすべて医師本人が行います。</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPLY ================= -->
+<section class="apply" id="apply">
+  <div class="wrap">
+    <div class="card apply-card">
+      <div class="hairline en">Invitation</div>
+      <h2>まずは、無料トライアルから。</h2>
+      <p class="terms"><span class="np">10日間のCGM測定と食事指導を、</span><span class="np"><strong>無料</strong>で体験いただけます。</span><br><span class="np">ピークパフォーマンス経験者の</span><span class="np">ご紹介がある方は、</span><span class="np"><strong>栄養解析検査（初回）も無料</strong>です。</span></p>
+      <hr>
+      <p class="terms"><span class="np">お申し込み後、内容を確認のうえ</span><span class="np">日程調整のご連絡をいたします。</span><br><span class="np">初回コンサルティングはZoom・30分、</span><span class="np">医師・寺田武史が担当します。</span></p>
+
+      <a class="cta" href="https://forms.gle/xgDu6wCn9s87fuuw9" target="_blank" rel="noopener">無料トライアルに申し込む<small class="en">— About 3 minutes —</small></a>
+      <p class="apply-note">※ご回答内容は初回コンサルティングの所見作成に使用します。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <svg class="flogo" viewBox="0 0 120 120"><use href="#logo-mark"/></svg>
+  <div class="fbrand en">Peak Performance Health</div>
+  監修医師：寺田 武史（アクアメディカルクリニック院長）<br>
+  医療法人社団健静会 アクアメディカルクリニック ／ 株式会社ATIPIX<br>
+  経営者のための分子栄養学プログラム
+</footer>
+
+<!-- ================= STICKY CTA ================= -->
+<div class="sticky">
+  <div class="t">初回トライアル<b>無料で体験できます</b></div>
+  <a href="https://forms.gle/xgDu6wCn9s87fuuw9" target="_blank" rel="noopener">申し込む</a>
+</div>
+
+<script>
+  var boxes = document.querySelectorAll('.ck');
+  var cnt = document.getElementById('cnt');
+  var msg = document.getElementById('msg');
+  function update(){
+    var n = 0;
+    boxes.forEach(function(b){ if(b.checked) n++; });
+    cnt.textContent = n;
+    if(n === 0){
+      msg.innerHTML = '印をつけると、ここに読み解きが表示されます。';
+    }else if(n <= 2){
+      msg.innerHTML = '<strong>「言われてみれば」が見つかりました。</strong><br>不調ではありません。ただ、健康診断には映らない栄養レベルの伸びしろのサインです。';
+    }else if(n <= 5){
+      msg.innerHTML = '<strong>その感覚は、多忙や年齢のせいとは限りません。</strong><br>血液データで見ると、原因が数値として特定できる可能性があります。';
+    }else{
+      msg.innerHTML = '<strong>これだけ思い当たるのは、体質のせいではないかもしれません。</strong><br>健診の「異常なし」の内側に、手をつけられる要因が複数潜んでいる可能性があります。';
+    }
+  }
+  boxes.forEach(function(b){ b.addEventListener('change', update); });
+</script>
+
+</body>
+</html>
