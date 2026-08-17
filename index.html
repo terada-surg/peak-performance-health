@@ -69,7 +69,7 @@
   }
   .band{
     background:var(--navy);color:#F4EFE3;text-align:center;
-    padding:26px 24px;font-size:clamp(15px,3.8vw,17.5px);line-height:2;letter-spacing:.05em;
+    padding:26px 20px;font-size:clamp(13.5px,3.5vw,17.5px);line-height:2;letter-spacing:.03em;
     border:1px solid rgba(197,169,110,.55);
   }
   .band .g{color:var(--gold2);}
@@ -89,7 +89,7 @@
   .logo{margin:0 auto 26px;width:104px;height:auto;display:block;color:var(--gold2);}
   .logotype{font-size:clamp(11.5px,3.2vw,14px);letter-spacing:clamp(.2em,.95vw,.42em);color:#F2ECDB;text-transform:uppercase;margin-bottom:7px;text-indent:.2em;}
   .logosub{font-size:clamp(8.5px,2.3vw,10px);letter-spacing:clamp(.15em,.7vw,.3em);color:var(--gold2);text-transform:uppercase;margin-bottom:48px;text-indent:.15em;}
-  h1{font-size:clamp(21px,5.8vw,42px);font-weight:600;color:#F7F2E4;line-height:1.7;letter-spacing:.04em;margin-bottom:28px;}
+  h1{font-size:clamp(20px,5.2vw,42px);font-weight:600;color:#F7F2E4;line-height:1.7;letter-spacing:.03em;margin-bottom:28px;}
   h1 .g{color:var(--gold2);}
   .hero-sub{font-size:clamp(14px,3.4vw,16px);color:#BFBAAA;letter-spacing:.05em;line-height:2.2;}
   .hero-sub strong{color:#EFE9DA;font-weight:600;}
@@ -127,7 +127,7 @@
   .dark{background:var(--navy);color:#EFE9DA;margin-top:78px;padding:68px 0 72px;text-align:center;}
   .dark .hairline{color:var(--gold2);}
   .dark .hairline::before,.dark .hairline::after{background:rgba(197,169,110,.42);}
-  .dark h2{font-size:clamp(20px,4.8vw,27px);color:#F7F2E4;letter-spacing:.09em;font-weight:600;line-height:2;margin:22px 0 24px;}
+  .dark h2{font-size:clamp(18px,4.4vw,27px);color:#F7F2E4;letter-spacing:.06em;font-weight:600;line-height:2;margin:22px 0 24px;}
   .dark h2 .g{color:var(--gold2);}
   .dark p{font-size:14.5px;color:#C9C4B4;line-height:2.3;letter-spacing:.04em;}
   .dark p strong{color:#EFE9DA;font-weight:600;}
@@ -210,7 +210,7 @@
   /* ===== TRACK RECORD ===== */
   .rec{display:flex;gap:16px;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line);}
   .rec:last-of-type{border-bottom:none;}
-  .rec .cat{flex:0 0 104px;font-size:11px;letter-spacing:.04em;color:var(--gold);line-height:1.7;}
+  .rec .cat{flex:0 0 118px;font-size:11px;letter-spacing:.02em;color:var(--gold);line-height:1.7;}
   .rec .val{font-size:15px;color:var(--navy);font-weight:600;line-height:1.7;letter-spacing:.03em;}
   .rec .val small{display:block;font-size:12.5px;color:var(--muted);font-weight:400;margin-top:2px;}
   /* スマホでは項目名を上に出し、実績テキストに幅をすべて使わせる */
@@ -230,7 +230,7 @@
   /* ===== APPLY ===== */
   .apply{padding-bottom:80px;}
   .apply-card{padding:44px 26px 40px;text-align:center;border:1px solid var(--gold);}
-  .apply-card h2{font-size:clamp(20px,5vw,26px);color:var(--navy);letter-spacing:.08em;font-weight:600;line-height:1.9;margin:18px 0 20px;}
+  .apply-card h2{font-size:clamp(18px,4.6vw,26px);color:var(--navy);letter-spacing:.05em;font-weight:600;line-height:1.9;margin:18px 0 20px;}
   .apply-card .terms{font-size:13.5px;color:var(--muted);line-height:2.2;letter-spacing:.03em;}
   .apply-card .terms strong{color:var(--navy);}
   .apply-card hr{border:none;border-top:1px solid var(--line);margin:20px auto;width:72%;}
@@ -338,7 +338,7 @@
 <div class="dark">
   <div class="wrap">
     <div class="hairline en">Philosophy</div>
-    <h2>健康診断が見ているのは、<br>「病気かどうか」だけ。<br><span class="g">最高かどうか</span>は、誰も見ていない。</h2>
+    <h2>健康診断が見ているのは、<br>「病気かどうか」だけ。<br><span class="g">最高かどうか</span>は、<br class="sp">誰も見ていない。</h2>
     <p><span class="np">立ち上がりの速さ、</span><span class="np">判断の切れ味、</span><span class="np">回復力。</span><br><span class="np">これらは病気の領域ではなく、</span><span class="np"><strong>栄養と代謝の領域</strong>の話です。</span><br><span class="np">「異常ではない。</span><span class="np">でも、年々悪くなっている」──</span><br><span class="np">その差分は、</span><span class="np"><strong>血液データ</strong>でしか</span><span class="np">捉えられません。</span></p>
   </div>
 </div>
@@ -413,14 +413,14 @@
         <div class="cap en">Three Choice</div>
         <h4>3つを、選ぶ</h4>
         <ul>
-          <li>シュガー（量とタイミング）</li>
-          <li>ファット（質）</li>
-          <li>カフェイン（量と時間帯）</li>
+          <li><span class="np">シュガー</span><span class="np">（量とタイミング）</span></li>
+          <li><span class="np">ファット</span><span class="np">（質）</span></li>
+          <li><span class="np">カフェイン</span><span class="np">（量と時間帯）</span></li>
         </ul>
       </div>
     </div>
 
-    <div class="band" style="margin-top:20px;">我慢を続けるのではなく、<span class="g">判断基準</span>を持つ。<br>だから、会食の席でも迷わない。</div>
+    <div class="band" style="margin-top:20px;">我慢を続けるのではなく、<br class="sp"><span class="g">判断基準</span>を持つ。<br>だから、<br class="sp">会食の席でも迷わない。</div>
   </div>
 </section>
 
@@ -550,7 +550,7 @@
       </div>
       <div class="opt">
         <div class="ic"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></div>
-        <div><h4>感染症の検査</h4><p>ピロリ菌・プライベートチェック ほか</p></div>
+        <div><h4>感染症の検査</h4><p><span class="np">ピロリ菌・</span><span class="np">プライベートチェック ほか</span></p></div>
       </div>
       <div class="opt">
         <div class="ic"><svg viewBox="0 0 24 24"><use href="#i-brain"/></svg></div>
@@ -591,7 +591,7 @@
       </div>
     </div>
 
-    <div class="band" style="margin-top:22px;">この方法論を、<br class="sp">経営者のために設計し直したのが<br><span class="g">Peak Performance Health</span> です。</div>
+    <div class="band" style="margin-top:22px;">この方法論を、<br class="sp">経営者のために<br class="sp">設計し直したのが<br><span class="g">Peak Performance Health</span> です。</div>
   </div>
 </section>
 
@@ -616,7 +616,7 @@
   <div class="wrap">
     <div class="card apply-card">
       <div class="hairline en">Invitation</div>
-      <h2>まずは、無料トライアルから。</h2>
+      <h2>まずは、<br class="sp">無料トライアルから。</h2>
       <p class="terms"><span class="np">10日間のCGM測定と食事指導を、</span><span class="np"><strong>無料</strong>で体験いただけます。</span><br><span class="np">ピークパフォーマンス経験者の</span><span class="np">ご紹介がある方は、</span><span class="np"><strong>栄養解析検査（初回）も無料</strong>です。</span></p>
       <hr>
       <p class="terms"><span class="np">お申し込み後、内容を確認のうえ</span><span class="np">日程調整のご連絡をいたします。</span><br><span class="np">初回コンサルティングはZoom・30分、</span><span class="np">医師・寺田武史が担当します。</span></p>
