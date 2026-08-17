@@ -220,7 +220,13 @@
   }
 
   /* ===== DOCTOR ===== */
-  .doc{padding:34px 26px;text-align:center;}
+  .doc{padding:34px 26px;text-align:center;display:grid;grid-template-columns:1fr;gap:26px;}
+  .doc-ph{width:min(280px,72%);margin:0 auto;border:1px solid var(--gold-pale);padding:8px;background:var(--paper);}
+  .doc-ph img{width:100%;height:auto;display:block;}
+  @media(min-width:640px){
+    .doc{grid-template-columns:238px 1fr;gap:30px;align-items:start;text-align:left;padding:34px 30px;}
+    .doc-ph{width:100%;margin:0;}
+  }
   .doc .role{font-size:10.5px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;}
   .doc .name{font-size:26px;color:var(--navy);letter-spacing:.24em;font-weight:600;text-indent:.24em;}
   .doc .name-en{font-size:11px;letter-spacing:.34em;color:var(--gold);margin-top:8px;text-indent:.34em;}
@@ -602,11 +608,14 @@
     <h2 class="sec-title">担当は、すべて<br><span class="g">医師本人</span>です。</h2>
 
     <div class="card doc">
+      <div class="doc-ph"><img src="assets/doctor-terada.jpg" alt="寺田武史医師"></div>
+      <div class="doc-body">
       <div class="role en">Founder &amp; Medical Director</div>
       <div class="name">寺田 武史</div>
       <div class="name-en en">TAKESHI TERADA, M.D.</div>
       <div class="aff">アクアメディカルクリニック院長<br>株式会社ATIPIX 代表取締役</div>
       <p class="bio">消化器外科医として臨床に立ち続けたのち、分子栄養学へ。著書<span class="np">『なぜ、人は病気になるのか？』</span><span class="np">『元気なカラダを手に入れる3つのミト育』</span>はいずれもAmazonランキング1位。自身も<span class="np">IRONMANを完走する</span><span class="np">トライアスリート</span>として、分子栄養学的アプローチを体現しています。検査の解析から日々の伴走まで、<span class="np">担当はすべて医師本人が行います。</span></p>
+      </div>
     </div>
   </div>
 </section>
