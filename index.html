@@ -40,6 +40,9 @@
   }
   /* 文節を途中で割らせない単位。中で改行させたくない語句を包む */
   .np{display:inline-block;}
+  /* スマホのときだけ入る改行。PC表示は変えない */
+  br.sp{display:none;}
+  @media(max-width:560px){ br.sp{display:inline;} }
 
   /* ===== shared parts ===== */
   .hairline{
@@ -86,7 +89,7 @@
   .logo{margin:0 auto 26px;width:104px;height:auto;display:block;color:var(--gold2);}
   .logotype{font-size:clamp(11.5px,3.2vw,14px);letter-spacing:clamp(.2em,.95vw,.42em);color:#F2ECDB;text-transform:uppercase;margin-bottom:7px;text-indent:.2em;}
   .logosub{font-size:clamp(8.5px,2.3vw,10px);letter-spacing:clamp(.15em,.7vw,.3em);color:var(--gold2);text-transform:uppercase;margin-bottom:48px;text-indent:.15em;}
-  h1{font-size:clamp(23px,6.2vw,42px);font-weight:600;color:#F7F2E4;line-height:1.7;letter-spacing:.05em;margin-bottom:28px;}
+  h1{font-size:clamp(21px,5.8vw,42px);font-weight:600;color:#F7F2E4;line-height:1.7;letter-spacing:.04em;margin-bottom:28px;}
   h1 .g{color:var(--gold2);}
   .hero-sub{font-size:clamp(14px,3.4vw,16px);color:#BFBAAA;letter-spacing:.05em;line-height:2.2;}
   .hero-sub strong{color:#EFE9DA;font-weight:600;}
@@ -210,6 +213,11 @@
   .rec .cat{flex:0 0 104px;font-size:11px;letter-spacing:.04em;color:var(--gold);line-height:1.7;}
   .rec .val{font-size:15px;color:var(--navy);font-weight:600;line-height:1.7;letter-spacing:.03em;}
   .rec .val small{display:block;font-size:12.5px;color:var(--muted);font-weight:400;margin-top:2px;}
+  /* スマホでは項目名を上に出し、実績テキストに幅をすべて使わせる */
+  @media(max-width:520px){
+    .rec{flex-direction:column;align-items:flex-start;gap:5px;padding:18px 22px;}
+    .rec .cat{flex:none;letter-spacing:.1em;}
+  }
 
   /* ===== DOCTOR ===== */
   .doc{padding:34px 26px;text-align:center;}
@@ -310,7 +318,7 @@
       <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">会食の翌日は、立ち上がりがいつもより鈍い</span></label>
       <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">午前中、エンジンがかかるまでに時間がかかる</span></label>
       <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">午後、集中力が切れる時間帯が決まってある</span></label>
-      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">昼食後、強い眠気に襲われる日がある</span></label>
+      <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">昼食後、<span class="np">強い眠気に襲われる日がある</span></span></label>
       <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">眠っているのに、翌朝「回復した」という感覚が薄い</span></label>
       <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">疲労が、以前より翌日に残るようになった</span></label>
       <label class="check-item"><input type="checkbox" class="ck"><span class="box">✓</span><span class="txt">判断の切れ味が、鈍った気がする瞬間がある</span></label>
@@ -339,9 +347,9 @@
 <section>
   <div class="wrap">
     <div class="hairline en sec-label">Why Now</div>
-    <h2 class="sec-title">事業が伸びるほど、<br>最大のリスクは<span class="g">経営者の健康</span>になる。</h2>
+    <h2 class="sec-title">事業が伸びるほど、<br>最大のリスクは<br class="sp"><span class="g">経営者の健康</span>になる。</h2>
     <p class="lead"><span class="np">トップアスリートは、</span><span class="np">体を戦略にしています。</span><br><span class="np">大谷翔平は睡眠までを武器にし、</span><span class="np">L・ジェームスは</span><span class="np">年間2.5億円を身体に投じる。</span><br><span class="np">──<em>経営者だけが、</em></span><span class="np"><em>感覚のままでいいのか。</em></span></p>
-    <div class="band">体調が悪くなってから医者、という発想では<span class="g">もう勝てない</span>。</div>
+    <div class="band">体調が悪くなってから医者、<br class="sp">という発想では<span class="g">もう勝てない</span>。</div>
   </div>
 </section>
 
@@ -566,12 +574,12 @@
 
     <div class="card">
       <div class="rec">
-        <div class="cat">女子<br>バスケットボール</div>
-        <div class="val">オリンピック銀メダリストを支援</div>
+        <div class="cat">女子バスケットボール</div>
+        <div class="val"><span class="np">オリンピック</span><span class="np">銀メダリストを支援</span></div>
       </div>
       <div class="rec">
         <div class="cat">プロ野球</div>
-        <div class="val">年俸 3,500万 → 6,800万<small>オールスター選出</small></div>
+        <div class="val"><span class="np">年俸 3,500万</span> <span class="np">→ 6,800万</span><small>オールスター選出</small></div>
       </div>
       <div class="rec">
         <div class="cat">オートレース</div>
@@ -579,11 +587,11 @@
       </div>
       <div class="rec">
         <div class="cat">ほか多数</div>
-        <div class="val">幕内力士・Jリーガーなど<small>トップ選手のコンディションを支援</small></div>
+        <div class="val">幕内力士・Jリーガーなど<small><span class="np">トップ選手の</span><span class="np">コンディションを支援</span></small></div>
       </div>
     </div>
 
-    <div class="band" style="margin-top:22px;">この方法論を、経営者のために設計し直したのが<br><span class="g">Peak Performance Health</span> です。</div>
+    <div class="band" style="margin-top:22px;">この方法論を、<br class="sp">経営者のために設計し直したのが<br><span class="g">Peak Performance Health</span> です。</div>
   </div>
 </section>
 
