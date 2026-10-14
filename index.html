@@ -249,6 +249,15 @@
   .cta:hover{background:var(--deep);transform:translateY(-1px);}
   .cta small{display:block;font-size:11px;letter-spacing:.24em;color:var(--gold2);margin-top:6px;font-weight:400;}
   .apply-note{font-size:12px;color:#9A9587;margin-top:18px;letter-spacing:.05em;line-height:2;}
+  .apply-or{font-size:13px;color:var(--muted);line-height:2;letter-spacing:.03em;margin-top:30px;}
+  .cta.sub{background:transparent;color:var(--navy);box-shadow:none;margin-top:12px;letter-spacing:.08em;}
+  .cta.sub:hover{background:var(--navy);color:#F2ECDB;}
+  .cta.sub small{color:var(--gold);}
+  .stage-apply{
+    display:block;margin:18px auto 0;max-width:320px;text-align:center;text-decoration:none;
+    border:1px solid var(--navy);color:var(--navy);padding:13px 16px;font-size:14px;letter-spacing:.12em;font-weight:600;transition:all .2s;
+  }
+  .stage-apply:hover{background:var(--navy);color:#F2ECDB;}
 
   /* ===== STICKY CTA ===== */
   .sticky{
@@ -259,10 +268,14 @@
   .sticky .t{font-size:12px;color:var(--gold2);letter-spacing:.08em;line-height:1.6;}
   .sticky .t b{display:block;color:#F4EFE3;font-size:13.5px;font-weight:600;}
   .sticky a{
-    background:var(--gold);color:#fff;text-decoration:none;padding:12px 20px;
+    flex:1 1 0;max-width:230px;text-align:center;line-height:1.35;
+    background:var(--gold);color:#fff;text-decoration:none;padding:10px 12px;border:1px solid var(--gold);
     font-size:13.5px;letter-spacing:.1em;font-weight:600;white-space:nowrap;
   }
-  @media(max-width:400px){.sticky .t{font-size:11px;} .sticky a{padding:11px 15px;font-size:12.5px;}}
+  .sticky a small{display:block;font-size:11px;font-weight:400;letter-spacing:.06em;opacity:.9;}
+  .sticky a.fw{background:transparent;color:#F4EFE3;border-color:var(--gold2);}
+  .sticky a.fw small{color:var(--gold2);opacity:1;}
+  @media(max-width:400px){.sticky{gap:10px;padding:10px 12px;} .sticky a{padding:9px 8px;font-size:12.5px;letter-spacing:.06em;}}
 
   /* ===== FOOTER ===== */
   footer{background:var(--deep);color:#B3AE9E;text-align:center;padding:42px 24px;font-size:12px;letter-spacing:.1em;line-height:2.2;}
@@ -504,6 +517,7 @@
           <div class="amt en">&yen;88,000</div>
           <div class="sub">税込・3ヶ月｜血液栄養解析2回込み<br>サプリメント別途</div>
         </div>
+        <a class="stage-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdmm0JQYtFc0WueRXx9aRp8KdRcwc_KQ5hztDktIFMF4GRw4g/viewform?usp=pp_url&amp;entry.1867872354=%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%82%A6%E3%82%A3%E3%83%B3%EF%BC%88%C2%A588%2C000%E3%83%BB3%E3%83%B6%E6%9C%88%EF%BC%89" target="_blank" rel="noopener">ファーストウィンから申し込む</a>
       </div>
     </div>
 
@@ -630,7 +644,10 @@
       <hr>
       <p class="terms"><span class="np">お申し込み後、内容を確認のうえ</span><span class="np">日程調整のご連絡をいたします。</span><br><span class="np">初回コンサルティングはZoom・30分、</span><span class="np">医師・寺田武史が担当します。</span></p>
 
-      <a class="cta" href="https://forms.gle/xgDu6wCn9s87fuuw9" target="_blank" rel="noopener">トライアルに申し込む<small class="en">— About 3 minutes —</small></a>
+      <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdmm0JQYtFc0WueRXx9aRp8KdRcwc_KQ5hztDktIFMF4GRw4g/viewform?usp=pp_url&amp;entry.1867872354=%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%EF%BC%88%C2%A56%2C600%E3%83%BB1%E3%83%B6%E6%9C%88%EF%BC%89" target="_blank" rel="noopener">トライアルに申し込む<small class="en">— About 3 minutes —</small></a>
+
+      <p class="apply-or"><span class="np">最初から血液栄養解析で</span><span class="np">現在地を知りたい方は、</span><br><span class="np">ファーストウィンから</span><span class="np">始めることもできます。</span></p>
+      <a class="cta sub" href="https://docs.google.com/forms/d/e/1FAIpQLSdmm0JQYtFc0WueRXx9aRp8KdRcwc_KQ5hztDktIFMF4GRw4g/viewform?usp=pp_url&amp;entry.1867872354=%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%82%A6%E3%82%A3%E3%83%B3%EF%BC%88%C2%A588%2C000%E3%83%BB3%E3%83%B6%E6%9C%88%EF%BC%89" target="_blank" rel="noopener"><span class="np">ファーストウィンから</span><span class="np">申し込む</span><small class="en">— &yen;88,000 / 3 months —</small></a>
       <p class="apply-note">※ご回答内容は初回コンサルティングの所見作成に使用します。</p>
     </div>
   </div>
@@ -646,8 +663,8 @@
 
 <!-- ================= STICKY CTA ================= -->
 <div class="sticky">
-  <div class="t">初回トライアル<b>&yen;6,600 で体験できます</b></div>
-  <a href="https://forms.gle/xgDu6wCn9s87fuuw9" target="_blank" rel="noopener">申し込む</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmm0JQYtFc0WueRXx9aRp8KdRcwc_KQ5hztDktIFMF4GRw4g/viewform?usp=pp_url&amp;entry.1867872354=%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%EF%BC%88%C2%A56%2C600%E3%83%BB1%E3%83%B6%E6%9C%88%EF%BC%89" target="_blank" rel="noopener">トライアル<small>&yen;6,600で体験</small></a>
+  <a class="fw" href="https://docs.google.com/forms/d/e/1FAIpQLSdmm0JQYtFc0WueRXx9aRp8KdRcwc_KQ5hztDktIFMF4GRw4g/viewform?usp=pp_url&amp;entry.1867872354=%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%82%A6%E3%82%A3%E3%83%B3%EF%BC%88%C2%A588%2C000%E3%83%BB3%E3%83%B6%E6%9C%88%EF%BC%89" target="_blank" rel="noopener">ファーストウィン<small>&yen;88,000・3ヶ月</small></a>
 </div>
 
 <script>
